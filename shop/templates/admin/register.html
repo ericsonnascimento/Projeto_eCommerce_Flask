@@ -2,9 +2,12 @@
 
 {% block content %}
 
-<div class="text-center text-danger h1">Register</div>
-<div class="container">
+<div class="col-md-8 container">
+    
+    {% include '_messages.html' %}
     {% from "_formhelpers.html" import render_field %}
+
+    <div class="text-center h1 text-white bg-primary p-2">Register</div>
     <form method="post" enctype="multipart/form-date">
         <div>
             {{ render_field(form.name, class="form-control") }}
@@ -16,5 +19,6 @@
         </div>
         <p><input type=submit value="Registrar" class="btn btn-primary mt-3"></p>
     </form>
+</div>
 
 {% endblock content %}
